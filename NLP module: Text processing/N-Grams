@@ -1,0 +1,5 @@
+tokens_clean = sum(data['lemmatized'], [])  
+unigrams = (pd.Series(nltk.ngrams(tokens_clean,1)).value_counts())
+print(unigrams)
+bigrams = (pd.Series(nltk.ngrams(tokens_clean,2)).value_counts())
+print(bigrams)
